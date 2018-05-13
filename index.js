@@ -14,14 +14,16 @@ function nowServing(katzDeliLine){
   }
 }
 
-function currentLine(katzDeliLine){
-  for (i = 1, i < katzDeliLine.length, i++){
-    katzDeliLine.push(` `+[i+1]+`. `  + katzDeli[i]);
+function currentLine(katzDeliLine) {
+  var lineOrder = [];
+  
+  if (katzDeliLine.length === 0) {
+   return "The line is curently empty." ;
+ }
+  
+  for (var i = 0; i < katzDeliLine.length; i++) {
+    var name = katzDeliLine[i];
+   lineOrder.push(' ' + (i + 1) + '. ' + name);
   }
-  if (katzDeliLine.length === 0){
-    return `The line is currently empty.`;
-  }
-  else{
-    return `The line is currently: ${katzDeliLine}`
-  }
+  return "the line is currently:" + lineOrder;
 }
