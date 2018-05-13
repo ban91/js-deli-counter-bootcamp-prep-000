@@ -21,9 +21,9 @@ function currentLine(katzDeliLine) {
    return "The line is currently empty." ;
  }
   
-  for (var i = 1; i < katzDeliLine.length; i++) {
+  for (var i = 0; i < katzDeliLine.length; i++) {
     var name = katzDeliLine[i];
-   lineOrder.push(' ' + (i) + '. ' + name);
+   lineOrder.push(' ' + (i + 1) + '. ' + name);
   }
   return "The line is currently:" + lineOrder;
 }
